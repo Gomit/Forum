@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
-
 	getPosts();
+	
 	//sendEmail();
 
 	$('#add-post-form').on('submit', function(e){
@@ -29,13 +29,11 @@ $(document).ready(function(){
 function getPosts(){
 	var ref = new Firebase("https://forumforum.firebaseio.com");
 	var postref = ref.child("topics");
-	postref.on("value", function(snapshot) {
+	postref.on("child_added", function(snapshot) {
 		$('.topics').html("");
 		var data = snapshot.val();
-		var row = "";
-		$.each(data, function(key, val){
-			row += "<a href='topic_detail.html#"+key+"'><h2>"+val.title+"</h2></a>";
-		});
+		console.log(data);
+		var row = "<a href='topic_detail.html#"+snapshot.key()+"'><h2>"+data.title+"</h2></a>";
 		$('.topics').append(row);
 	}, function (errorObject) {
 	  console.log("The read failed: " + errorObject.code);
