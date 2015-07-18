@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 	var ref = new Firebase("https://forumforum.firebaseio.com/");
 	var tagsRef = ref.child("tags");
-	var postsRef = ref.child("posts");
+	var postsRef = ref.child("topics");
 
 	tagsRef.on("child_added", function(snapshot, prevChildKey) {
 		var tag = snapshot.val();
