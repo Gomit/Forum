@@ -16,4 +16,5 @@ $( document ).ready(function(){
 		ref.unauth();
 		window.location.href = "register.html";
 	});
+	$('.useremail').append('<img src="'+user.facebook.profileImageURL+'" class="img-circle" style="width:25px;"/> '+user.facebook.displayName);
 });
