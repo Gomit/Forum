@@ -13,7 +13,7 @@ function getPosts(){
 		var data = snapshot.val();
 		var row = "";
 		$.each(data, function(key, val){
-			row += "<a href='topic_detail.html/"+key+"'><h2>"+val.title+"</h2></a>";
+			row += "<a href='topic_detail.html#"+key+"'><h2>"+val.title+"</h2></a>";
 		});
 		$('.topics').append(row);
 	}, function (errorObject) {

@@ -39,82 +39,82 @@
         <h3 class="text-muted">LOGGA</h3>
       </div>
 
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="panel panel-primary">
-              <div class="panel-heading comment">
-                <h3 class="panel-title">Hur skickar man ett post request?</h3>
-              </div>
-                <div class="panel-body">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class="welcome-form row">
+      <div id="dynamic-content" style="display:none">
+        <div class="row">
           <div class="col-md-6 col-md-offset-3">
-            <form>
-              <br>
-              <!-- <button type="submit" class="btn btn-primary navbar-btn">Besvara ämne</button> -->
-              <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
-                Besvara ämne
-              </button>
+            <div class="panel panel-primary">
+                <div class="panel-heading comment">
+                  <h3 id="topic-title" class="panel-title">&nbsp;</h3>
+                </div>
+                  <div id="topic-body" class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="welcome-form row">
+            <div class="col-md-6 col-md-offset-3">
+              <form>
+                <br>
+                <!-- <button type="submit" class="btn btn-primary navbar-btn">Besvara ämne</button> -->
+                <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
+                  Besvara ämne
+                </button>
 
-              <!-- Modal -->
-              <div class="modal fade comment-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <!-- Modal head -->
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Besvara ämne</h4>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="modal-body no-padding">
-                      <textarea placeholder="Din kommentar" rows="10"></textarea>
-                    </div>
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
-                      <button type="button" class="btn btn-primary">Spara ändringar</button>
+                <!-- Modal -->
+                <div class="modal fade comment-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <!-- Modal head -->
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Besvara ämne</h4>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body no-padding">
+                        <textarea placeholder="Din kommentar" rows="10"></textarea>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+                        <button type="button" class="btn btn-primary">Spara ändringar</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-            </form>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i>Johan</i> skrev igår</h3>
-              </div>
-                <div class="panel-body">
-                  Det är bara att skicka ett post request.
+              </form>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><i>Johan</i> skrev igår</h3>
                 </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i>Sebbe</i> skrev för 20 minuter sedan</h3>
+                  <div class="panel-body">
+                    Det är bara att skicka ett post request.
+                  </div>
               </div>
-                <div class="panel-body">
-                  Precis som Johan sa, bara skicka ett post request!
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><i>Sebbe</i> skrev för 20 minuter sedan</h3>
                 </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i>Meron</i> skrev för 12 minuter sedan</h3>
+                  <div class="panel-body">
+                    Precis som Johan sa, bara skicka ett post request!
+                  </div>
               </div>
-                <div class="panel-body">
-                  Skicka post request!
-            </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><i>Meron</i> skrev för 12 minuter sedan</h3>
+                </div>
+                  <div class="panel-body">
+                    Skicka post request!
+              </div>
+        </div>
+        <div> 
       </div>
-      <div> 
-
-
     </div> <!-- /container -->
   </body>
 </html>
