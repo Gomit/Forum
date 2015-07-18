@@ -68,6 +68,18 @@ body {
 	padding-top: 0.8em;
 	padding-left: 1em;
 }
+
 .menu-items a {
 	color:#000;
+}
+
+
+.close-button {
+	display: inline;
+  	float: right;
+}
+
+
+.modal-header{
+	padding-top: 12px !important;
 }
