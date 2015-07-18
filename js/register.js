@@ -13,9 +13,16 @@ $(document).ready(function(){
 		    	"name": authData.facebook.displayName,
 		    	"profile_image": authData.facebook.profileImageURL,
 		    };
-		    userref.set(user);
-		    window.location.href = "add_post.html";
-
+		    userref.update(user);
+		    
+		    userref.on('value', function(snapshot) {
+		    	var email = snapshot.val().email;
+		    	if (email) {
+		    		window.location.href = "add_post.html";
+		    	}else {
+		    		window.location.href = "welcome.html";
+		    	}
+		    });
 		  }
 		});
 	});
