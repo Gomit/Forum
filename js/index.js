@@ -30,7 +30,7 @@ function getPosts(){
 	var ref = new Firebase("https://forumforum.firebaseio.com");
 	var postref = ref.child("topics");
 	var row = "";
-	postref.on("child_added", function(snapshot) {
+	postref.orderByChild("created_at").on("child_added", function(snapshot) {
 		$('.topics').html("");
 		var data = snapshot.val();
 		console.log(data);
