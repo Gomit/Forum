@@ -1,7 +1,14 @@
 body{
 }
 
-.welcome-form input {
+.welcome-form input, .welcome-form button {
 	margin: auto;
   	display: block;
+}
+
+.welcome-form {
+	margin-top: 2em;
+}
+.btn-primary {
+	background-color: rgb(65, 149, 219);
 }
