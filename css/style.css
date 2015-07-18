@@ -44,3 +44,7 @@ body{
 .btn-primary {
 	background-color: rgb(65, 149, 219);
 }
+.list h2 {
+	font-weight: 200;
+	font-family: Helvetica, Arial, serif
+}
