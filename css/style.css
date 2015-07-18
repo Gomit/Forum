@@ -83,3 +83,11 @@ body {
 .modal-header{
 	padding-top: 12px !important;
 }
+
+.panel-heading {
+	background-color: rgb(65, 149, 219) ;
+}
+
+#register-indent {
+	
+}
