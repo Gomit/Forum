@@ -18,7 +18,7 @@ $(document).ready(function(){
 		    userref.on('value', function(snapshot) {
 		    	var email = snapshot.val().email;
 		    	if (email) {
-		    		window.location.href = "add_post.html";
+		    		window.location.href = "list.html";
 		    	}else {
 		    		window.location.href = "welcome.html";
 		    	}
