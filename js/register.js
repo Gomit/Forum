@@ -13,9 +13,8 @@ $(document).ready(function(){
 		    	"name": authData.facebook.displayName,
 		    	"profile_image": authData.facebook.profileImageURL,
 		    };
-		    console.log(authData);
-		    console.log(user);
-		    userref.set(user);
+		    userref.push(user);
+		    window.location.href = "add_post.html";
 
 		  }
 		});
