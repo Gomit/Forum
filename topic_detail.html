@@ -97,26 +97,22 @@
                         <h4 class="modal-title" id="myModalLabel">Besvara: <strong id="topic-title-modal"></strong></h4>
                       </div>
                       <!-- Modal body -->
-                      <div class="modal-body no-padding">
-                        <textarea placeholder="Din kommentar" rows="10"></textarea>
-                      </div>
-                      <!-- Modal footer -->
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Spara ändringar</button>
-                      </div>
+                      <form id="send-comment">
+                        <div class="modal-body no-padding">
+                          <textarea id="write-comment" placeholder="Din kommentar" rows="10"></textarea>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-primary">Skicka kommentar</button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
 
-              </form>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title"><i id="comment-title"></i> skrev igår</h3>
+                <div id="push_comment">
+                  
                 </div>
-                <div class="panel-body">
-                  Det är bara att skicka ett post request.
-                </div>
-              </div>
         </div>
         <div> 
       </div>
