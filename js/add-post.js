@@ -3,24 +3,25 @@ $( document ).ready(function() {
 	var tagsRef = ref.child("tags");
 	var postsRef = ref.child("posts");
 
-	ref.on("child_added", function(snapshot, prevChildKey) {
-	  var tag = snapshot.val();
-		$.each( tag, function( key, value ) {
-			console.log(value.name)
-			$(".checkbox").append('<label><input type="checkbox">' + value.name + '</label><br>');
-		});
+	tagsRef.on("child_added", function(snapshot, prevChildKey) {
+		var tag = snapshot.val();
+	  	$(".checkbox").append('<label><input type="checkbox">' + tag.name + '</label><br>');
 	});
 
 	$("form").submit(function (e) {
-      e.preventDefault();
-      console.log($("#email").val());
-      console.log($("#body").val());
+	  	e.preventDefault();
+	  	if(ref.getAuth()) {
+			postsRef.push({
+				title: $("#title").val(),
+				body: $("#body").val(),
+				user_id: ref.getAuth().uid,
+				created_at: Firebase.ServerValue.TIMESTAMP
+			});
+		} else {
+			alert('You need to be logged in.')
+		}
 
-      	postsRef.push({
-			title: $("#title").val(),
-			body: $("#body").val(),
-			created_at: Firebase.ServerValue.TIMESTAMP
-		});
-    })
-		  
+		window.location.href = "/"
+	})
+
 });
