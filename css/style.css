@@ -29,10 +29,6 @@
 	font-weight: 200;
 }
 
-body{
-	padding-top:70px;
-}
-
 .welcome-form input, .welcome-form button {
 	margin: auto;
   	display: block;
