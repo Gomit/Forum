@@ -14,6 +14,7 @@ $(document).ready(function() {
 		console.log(topicItem);
 		$("#topic-title").html(topicTitle);
 		$("#topic-body").html(topicBody);
+		$("#topic-title-modal").html('"' + topicTitle + '"');
 		$("#dynamic-content").fadeIn(200);
 	});
 });
