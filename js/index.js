@@ -8,16 +8,25 @@ $(document).ready(function(){
 		e.preventDefault();
 		var ref = new Firebase("https://forumforum.firebaseio.com");
 		var postsRef = ref.child("topics");
+
 	  	if(ref.getAuth()) {
-			var newPostsRef = postsRef.push({
+	  		postsRef.push().setWithPriority({
+				title: $("#title").val(),
+				body: $("#body").val(),
+				user_id: ref.getAuth().uid,
+				created_at: Firebase.ServerValue.TIMESTAMP,
+			}, Firebase.ServerValue.TIMESTAMP)
+
+			/*var post = {
 				title: $("#title").val(),
 				body: $("#body").val(),
 				user_id: ref.getAuth().uid,
 				created_at: Firebase.ServerValue.TIMESTAMP
-			});
-			var id = newPostsRef.key();
-			console.log(id);
-			window.location.href = "topic_detail.html#"+id;
+			};
+		
+		postsRef.setWithPriority(post, 1000);*/
+		return console.log(postsRef.key())
+			//window.location.href = "topic_detail.html#"+id;
 		} else {
 			alert('You need to be logged in.')
 		}
@@ -27,13 +36,13 @@ $(document).ready(function(){
 });
 
 function getPosts(){
-	var ref = new Firebase("https://forumforum.firebaseio.com");
-	var postref = ref.child("topics");
+	var ref = new Firebase("https://forumforum.firebaseio.com/topics");
+	var postRef = ref.orderByChild("created_at").limitToFirst(2);
 	var row = "";
-	postref.orderByChild("created_at").on("child_added", function(snapshot) {
+	postRef.on("child_added", function(snapshot) {
 		$('.topics').html("");
 		var data = snapshot.val();
-		console.log(data);
+		console.log(snapshot.key());
 		row += "<a href='topic_detail.html#"+snapshot.key()+"'><h2>"+data.title+"</h2></a>";
 		$('.topics').append(row);
 	}, function (errorObject) {
