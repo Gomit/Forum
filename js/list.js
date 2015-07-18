@@ -29,11 +29,12 @@ $(document).ready(function(){
 function getPosts(){
 	var ref = new Firebase("https://forumforum.firebaseio.com");
 	var postref = ref.child("topics");
+	var row = "";
 	postref.on("child_added", function(snapshot) {
 		$('.topics').html("");
 		var data = snapshot.val();
 		console.log(data);
-		var row = "<a href='topic_detail.html#"+snapshot.key()+"'><h2>"+data.title+"</h2></a>";
+		row += "<a href='topic_detail.html#"+snapshot.key()+"'><h2>"+data.title+"</h2></a>";
 		$('.topics').append(row);
 	}, function (errorObject) {
 	  console.log("The read failed: " + errorObject.code);
