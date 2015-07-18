@@ -46,8 +46,8 @@
           <div class="col-md-4">
             <!-- <a class="btn btn-lg btn-success text-center"  href="#" role="button">Skapa tråd</a>-->
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="posts">
-              Launch demo modal
+            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" id="posts">
+              Skapa en post
             </button>
           </div>
           <div class="col-md-4"></div>
@@ -73,12 +73,24 @@
                   </div>
                   <!-- Body -->
                   <div class="modal-body">
-                    <input>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form role="form" id="add-post-form" method="post">
+                          <div class="form-group">
+                            <input name="title" type="text" id="title" class="form-control input-lg" placeholder="Rubrik">
+                          </div>
+                          <div class="form-group">
+                            <textarea class="form-control input-lg" id="body" rows="6" placeholder="Beskrivning"></textarea>
+                          </div>
+                        
+                      </div>
+                    </div>
                   </div>
                   <!-- Footer -->
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Avbryt</button>
-                    <button type="button" class="btn btn-primary">Skapa ämne</button>
+                    <button type="submit" class="btn btn-primary">Skapa ämne</button>
+                    </form>
                   </div>
                 </div>
               </div>

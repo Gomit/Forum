@@ -1,7 +1,27 @@
+
 $(document).ready(function(){
 
 	getPosts();
-	sendEmail();
+	//sendEmail();
+
+	$('#add-post-form').on('submit', function(e){
+		e.preventDefault();
+		var ref = new Firebase("https://forumforum.firebaseio.com");
+		var postsRef = ref.child("topics");
+	  	if(ref.getAuth()) {
+			var newPostsRef = postsRef.push({
+				title: $("#title").val(),
+				body: $("#body").val(),
+				user_id: ref.getAuth().uid,
+				created_at: Firebase.ServerValue.TIMESTAMP
+			});
+			var id = newPostsRef.key();
+			console.log(id);
+			window.location.href = "topic_detail.html#"+id;
+		} else {
+			alert('You need to be logged in.')
+		}
+	});
 	
 // Attach an asynchronous callback to read the data at our posts reference
 });
@@ -23,21 +43,6 @@ function getPosts(){
 }
 
 function sendEmail(){
-	/*var m = new mandrill.Mandrill('M5KsiYsmJCJoDKOxkGWhnQ');
-	var params = {
-	    "message": {
-	        "from_email":"Johan@dobus.se",
-	        "to":[{"email":"sebastian@dobus.se"}],
-	        "subject": "Sluta leka tuff.....",
-	        "text": "Whaaaaaat"
-	    }
-	};
-	console.log(m);
-	 m(params, function(res) {
-        log(res);
-    }, function(err) {
-        log(err);
-    });*/
 	$.ajax({
 		type: 'POST',
 		url: 'https://mandrillapp.com/api/1.0/messages/send.json',
