@@ -9,7 +9,7 @@ $( document ).ready(function(){
 			console.log(auth);
 			var userref = ref.child("users").child(auth.auth.uid);
 			userref.update({"email": email.val()});
-			window.location.href = "add_post.html";
+			window.location.href = "list.html";
 		}else {
 			alert('you need to have a value..');
 		}
