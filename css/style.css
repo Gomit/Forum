@@ -1,2 +1,7 @@
 body{
 }
+
+.welcome-form input {
+	margin: auto;
+  	display: block;
+}
