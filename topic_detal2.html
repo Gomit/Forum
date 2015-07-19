@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/topic_detail.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+	<nav class="navbar navbar-fixed-top" style="background:#fff; border-bottom:1px solid#eee;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="color:#000;" href="#">KLAR</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse pull-right">
+          <ul class="nav navbar-nav menu-items">
+            <!--<li class=""><a href="list.html">Lists</a></li>-->
+           
+          </ul>
+          <ul class="nav navbar-nav menu-items">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="useremail"></span><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+              	<li><a href="list.html">Trådar</a></li>
+                <li><a href="#" class="logout">Logga ut</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2" style="border-bottom:1px solid #eee; padding-bottom:1em;">
+				<div class="detail-container">
+					<div class="text-center">
+						<h3 class="text-center" id="topic-title"></h3>
+					</div>
+					<div class="row mt2">
+						<div class="col-md-1"><i class="fa fa-thumbs-up fa-2x"></i><br>120</div>
+						<div class="col-md-9" id="topic-body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p><span>22 minutes ago</span></div>
+						<div class="col-md-2"><img src="" class="profile_image img-circle pull-right"/></div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="row mt2">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="row">
+					<div class="col-md-1">
+						<i class="fa fa-thumbs-up fa-1x"></i><br>120
+					</div>
+					<div class="col-md-9">
+						<strong>Johan Sveningsson</strong>
+						<p>Tjenare Vad händer yaaaaoooooooo</p>
+					</div>
+					<div class="col-md-2">
+						<img src="" class="profile_image img-circle pull-right"/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+ 	</div>
+</body>
+</html>

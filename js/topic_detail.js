@@ -1,11 +1,14 @@
+var topicId = window.location.hash.substr(1);
+var ref = new Firebase("https://forumforum.firebaseio.com/");
+var topicRef = ref.child("topics");
+var topic 	 = topicRef.child(topicId);
+var commentRef = topic.child("comments");
+var user_id = "";
 $(document).ready(function() {
-	var topicId = window.location.hash.substr(1);
+	
 
 	// Get a reference to our posts
-	var ref 	 = new Firebase("https://forumforum.firebaseio.com/");
-	var topicRef = ref.child("topics");
-	var topic 	 = topicRef.child(topicId);
-	var commentRef = topic.child("comments");
+	
 
 	
 
@@ -14,11 +17,13 @@ $(document).ready(function() {
 		var topicItem 	= snapshot.val();
 		var topicTitle  = topicItem.title;
 		var topicBody 	= topicItem.body;
+		user_id 		= topicItem.user_id;
 		console.log(topicItem);
 		$("#topic-title").html(topicTitle);
-		$("#topic-body").html(topicBody);
+		$("#topic-body").html("<p>" + topicBody + "</p><span class='text-muted'>22 minutes ago</span>");
 		$("#topic-title-modal").html('"' + topicTitle + '"');
 		$("#dynamic-content").fadeIn(200);
+		getProfileImage(user_id);
 	});
 
 	commentRef.on("child_added", function(snapshot) {
@@ -53,3 +58,11 @@ $(document).ready(function() {
 		//window.location.href = "/"
 	})
 });
+
+function getProfileImage(user_id){
+	var userref = ref.child("users").child(user_id);
+	console.log(userref);
+	userref.on("value", function(snapshot){
+		$(".profile_image").attr("src", snapshot.val().profile_image);
+	});
+}

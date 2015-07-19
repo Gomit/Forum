@@ -86,6 +86,21 @@ body {
 	padding-top: 12px !important;
 }
 
+#dynamic-content h1{ 
+	font-weight: 200;
+	font-family: Helvetica, Arial, serif
+}
+.detail-container h3{
+	font-weight: 300;
+	padding-bottom:0.4em;
+	width:auto;
+	border-bottom:2px solid #eee;
+	display:inline-block;
+	margin:auto;
+}
+.profile_image {
+	width:45px;
+}
 .panel-heading {
 	background-color: rgb(65, 149, 219) ;
 }
