@@ -1,7 +1,10 @@
 body {
 	padding-top:70px;
-	//background: url("http://usatsneakhype.files.wordpress.com/2013/08/nice-ass-gifs-253.gif?w=1000");
-	filter: blur(5px)
+}body.bg{
+	background: url("/img/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color:white;
 }
 .register {
 	//background:#469785;
