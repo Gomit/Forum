@@ -117,3 +117,12 @@ body {
 	font-size: 12px;
 	font-style: italic;
 }
+
+.modal-button {
+	border-radius: 0px;
+}
+
+#topic-modal-button {
+	margin-top: 4%;
+}
+

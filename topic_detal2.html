@@ -8,6 +8,7 @@
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/topic_detail.js"></script>
+    <script src="snap.svg-min.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +19,7 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-fixed-top" style="background:#fff; border-bottom:1px solid#eee;">
+	<nav class="navbar navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -103,6 +104,28 @@
 				</div>
 			</div>
 		</div>
+	<button type="button" id="topic-modal-button" class="btn btn-primary btn-lg col-md-2 col-md-offset-5 modal-button" data-toggle="modal" data-target="#myModal">
+	  Lägg till kommentar
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content modal-button">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title text-center" id="myModalLabel">Besvarar ämne</h4>
+	      </div>
+	      <div class="modal-body">
+	        <textarea id="topic-textarea" placeholder="Skriv kommentar här..."></textarea>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary modal-button">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
  	</div>
 </body>
 </html>
