@@ -66,3 +66,19 @@ function getProfileImage(user_id){
 		$(".profile_image").attr("src", snapshot.val().profile_image);
 	});
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

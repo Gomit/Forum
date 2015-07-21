@@ -107,7 +107,13 @@ body {
 .panel-heading {
 	background-color: rgb(65, 149, 219) ;
 }
-
-#register-indent {
-	
+.fa-2x {
+	text-indent: 3%;
+}
+#topic-topic {
+	font-size: 18px;
+}
+.topic-time {
+	font-size: 12px;
+	font-style: italic;
 }
