@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>KLAAR - #1 forum in the world</title>
 
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/topic_detail.js"></script>
-    <script src="snap.svg-min.js"></script>
+    <script type="text/javascript" src="js/snap.svg-min.js"></script>
+    <script type="text/javascript" src="js/topic_detal2.js"></script>
+
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,13 +30,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style="color:#000;" href="#">KLAAR</a>
+          		<img src="klaar4.svg" id="logoBild">
+           	<button id="animationButton">
+    <svg viewBox="0 0 100 100" id="svg2">
+<polygon 
+        fill="black"
+        points="24.25,40.442 48.357,40.442 
+	62.523,40.442 77.25,40.442 50,88.625 43.875,78 39.625,70.75 36.5,65.5 33.125,59.625 29.375,53.25 25.625,46.875 21.875,40.458">
+
+    <animate 
+    	id="animationToCross"
+        begin="click" 
+        attributeName="points" 
+        dur="200ms"
+        to="81.061,87.061 53.25,59.25 80.273,32.227 
+	78.309,30.261 51.284,57.284 23.868,29.868 21.902,31.833 49.318,59.25 21.116,87.453 23.082,89.418 51.284,61.216 79.094,89.023"
+        fill="freeze" />
+
+</polygon>
+	</svg>
+			</button>
         </div>
-        <div id="navbar" class="collapse navbar-collapse pull-right">
-          <ul class="nav navbar-nav menu-items">
-            <!--<li class=""><a href="list.html">Lists</a></li>-->
-           
-          </ul>
+         <!-- </ul>
           <ul class="nav navbar-nav menu-items">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="useremail"></span><span class="caret"></span></a>
@@ -43,10 +60,10 @@
                 <li><a href="#" class="logout">Logga ut</a></li>
               </ul>
             </li>
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </nav>
+          </ul> -->
+        </div> <!-- /.nav-collapse -->
+     </div> <!--/.container -->
+    </nav> 
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2" style="border-bottom:1px solid #eee; padding-bottom:1em;">
@@ -55,17 +72,78 @@
 						<h3 class="text-center" id="topic-title"></h3>
 					</div>
 					<div class="row mt2">
-						<div class="col-md-1"><i class="fa fa-star-o fa-2x"></i>6</div>
-						<div class="col-md-9" id="topic-body"><strong id="topic-topic">"Hur stor är en cirkel?"</strong><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						<div class="col-md-1">						
+							<div>
+<svg onclick="menu(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
+<script type="application/ecmascript">
+    <![CDATA[
+        
+        function menu(evt) {
+
+            var trigger = document.getElementById("trigger");
+            var trigger1 = document.getElementById("trigger1");
+
+
+            if(typeof clicked === 'undefined') {
+
+                clicked = true;
+
+                trigger.setAttribute("from", "0 50 50");
+                trigger.setAttribute("to", "360 50 50");
+                trigger1.setAttribute("from", "white");
+                trigger1.setAttribute("to", "black");
+
+            } else {
+
+                delete clicked;
+
+                trigger.setAttribute("from", "360 50 50");
+                trigger.setAttribute("to", "0 50 50");
+                trigger1.setAttribute("from", "black");
+                trigger1.setAttribute("to", "white");
+            }
+    }]]>
+</script>
+    <polygon id="topic-poly" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="50.067,8.743 63.492,35.943 
+    93.509,40.306 71.789,61.479 76.916,91.375 50.067,77.259 23.218,91.375 28.346,61.479 6.625,40.306 36.642,35.943 ">
+                            <animateTransform id="trigger"
+                                        attributeName="transform" 
+                                        attributeType="XML" 
+                                        type="rotate" 
+                                        from="0 50 50" 
+                                        to="360 50 50" 
+                                        begin="click" 
+                                        dur="450ms" 
+                                        repeatCount="1"
+                                        fill="freeze"
+                                        additive="replace" />
+                                        <animate id="trigger1"
+                                        attributeName="fill" 
+                                        from="white" 
+                                        to="black" 
+                                        repeatCount="1" 
+                                        begin="click"
+                                        dur="300ms" 
+                                        fill="freeze"
+                                        additive="replace" />
+
+    </polygon>
+</svg>
+						</div>
+					</div>
+						<div class="col-md-9" id="topic-body"><strong id="topic-topic">"Hur stor är en cirkel?"</strong>
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p><span class="topic-time">22 minutes ago</span></div>
+						</p>
+						<span class="topic-time">22 minutes ago</span></div>
 						<div class="col-md-2"><img src="" class="profile_image img-circle pull-right"/></div>
 					</div>
-
 				</div>
 
 			</div>
@@ -74,7 +152,64 @@
 			<div class="col-md-8 col-md-offset-2">
 				<div class="row">
 					<div class="col-md-1">
-						<i class="fa fa-star-o fa-2x"></i>0
+						<div>
+							<svg onclick="menu1(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
+<script type="application/ecmascript">
+    <![CDATA[
+        
+        function menu1(evt) {
+
+            var starJohan = document.getElementById("starJohan");
+            var starJohan1 = document.getElementById("starJohan1");
+
+
+            if(typeof clicked === 'undefined') {
+
+                clicked = true;
+
+                starJohan.setAttribute("from", "0 50 50");
+                starJohan.setAttribute("to", "360 50 50");
+                starJohan1.setAttribute("from", "white");
+                starJohan1.setAttribute("to", "black");
+
+            } else {
+
+                delete clicked;
+
+                starJohan.setAttribute("from", "360 50 50");
+                starJohan.setAttribute("to", "0 50 50");
+                starJohan1.setAttribute("from", "black");
+                starJohan1.setAttribute("to", "white");
+            }
+    }]]>
+</script>
+    <polygon fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="50.067,8.743 63.492,35.943 
+    93.509,40.306 71.789,61.479 76.916,91.375 50.067,77.259 23.218,91.375 28.346,61.479 6.625,40.306 36.642,35.943 ">
+                            <animateTransform id="starJohan"
+                                        attributeName="transform" 
+                                        attributeType="XML" 
+                                        type="rotate" 
+                                        from="0 50 50" 
+                                        to="360 50 50" 
+                                        begin="click" 
+                                        dur="450ms" 
+                                        repeatCount="1"
+                                        fill="freeze"
+                                        additive="replace" />
+                                        <animate id="starJohan1"
+                                        attributeName="fill" 
+                                        from="white" 
+                                        to="black" 
+                                        repeatCount="1" 
+                                        begin="click"
+                                        dur="300ms" 
+                                        fill="freeze"
+                                        additive="replace" />
+
+    </polygon>
+</svg>
+						</div>
 					</div>
 					<div class="col-md-9">
 						<strong>Johan Sveningsson</strong>
@@ -91,12 +226,69 @@
 			<div class="col-md-8 col-md-offset-2">
 				<div class="row">
 					<div class="col-md-1">
-						<i class="fa fa-star-o fa-2x"></i>0
+						<div>
+<svg onclick="menu2(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
+<script type="application/ecmascript">
+    <![CDATA[
+        
+        function menu2(evt) {
+
+            var starTim = document.getElementById("starTim");
+            var starTim1 = document.getElementById("starTim1");
+
+
+            if(typeof clicked === 'undefined') {
+
+                clicked = true;
+
+                starTim.setAttribute("from", "0 50 50");
+                starTim.setAttribute("to", "360 50 50");
+                starTim1.setAttribute("from", "white");
+                starTim1.setAttribute("to", "black");
+
+            } else {
+
+                delete clicked;
+
+                starTim.setAttribute("from", "360 50 50");
+                starTim.setAttribute("to", "0 50 50");
+                starTim1.setAttribute("from", "black");
+                starTim1.setAttribute("to", "white");
+            }
+    }]]>
+</script>
+    <polygon fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="50.067,8.743 63.492,35.943 
+    93.509,40.306 71.789,61.479 76.916,91.375 50.067,77.259 23.218,91.375 28.346,61.479 6.625,40.306 36.642,35.943 ">
+                            <animateTransform id="starTim"
+                                        attributeName="transform" 
+                                        attributeType="XML" 
+                                        type="rotate" 
+                                        from="0 50 50" 
+                                        to="360 50 50" 
+                                        begin="click" 
+                                        dur="450ms" 
+                                        repeatCount="1"
+                                        fill="freeze"
+                                        additive="replace" />
+                                        <animate id="starTim1"
+                                        attributeName="fill" 
+                                        from="white" 
+                                        to="black" 
+                                        repeatCount="1" 
+                                        begin="click"
+                                        dur="300ms" 
+                                        fill="freeze"
+                                        additive="replace" />
+
+    </polygon>
+</svg>
+						</div>
 					</div>
 					<div class="col-md-9">
 						<strong>Tim Gabrielsson</strong>
-						<p>Tung är du!</p>
-						<span class="topic-time">10 minutes ago</span>
+						<p>Inte mycket, själv?</p>
+						<span class="topic-time">12 minutes ago</span>
 					</div>
 					<div class="col-md-2">
 						<img src="" class="profile_image img-circle pull-right"/>
@@ -104,7 +296,32 @@
 				</div>
 			</div>
 		</div>
-	<button type="button" id="topic-modal-button" class="btn btn-primary btn-lg col-md-2 col-md-offset-5 modal-button" data-toggle="modal" data-target="#myModal">
+		<!-- <div class="row mt2">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="row">
+					<div class="col-md-1">
+						<div>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<strong>Tim Gabrielsson</strong>
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						<span class="topic-time">10 minutes ago</span>
+					</div>
+					<div class="col-md-2">
+						<img src="" class="profile_image img-circle pull-right"/>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	<button type="button" id="topic-modal-button" class="btn btn-primary btn-lg col-md-2 col-md-offset-4 modal-button" data-toggle="modal" data-target="#myModal">
 	  Lägg till kommentar
 	</button>
 
@@ -113,15 +330,14 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content modal-button">
 	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title text-center" id="myModalLabel">Besvarar ämne</h4>
+			<button type="button" class="btn btn-default modal-button" data-dismiss="modal">Stäng</button>
+	        <h4 class="modal-title text-center col-md-4 col-md-offset-2" id="myModalLabel">Besvarar ämne</h4>
 	      </div>
 	      <div class="modal-body">
-	        <textarea id="topic-textarea" placeholder="Skriv kommentar här..."></textarea>
+	        <textarea id="topic-textarea" placeholder="Skriv din kommentar här..." rows="10%" cols="79%"></textarea>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary modal-button">Save changes</button>
+	        <button type="button" class="col-md-4 col-md-offset-4 btn btn-primary modal-button">Publicera</button>
 	      </div>
 	    </div>
 	  </div>

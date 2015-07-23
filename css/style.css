@@ -118,11 +118,74 @@ body {
 	font-style: italic;
 }
 
+#topic-textarea {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+
+#topic-body {
+	background-color: ;
+}
+
 .modal-button {
 	border-radius: 0px;
 }
 
+.btn-default.modal-button {
+	margin-left: 88.999%;
+}
+
 #topic-modal-button {
-	margin-top: 4%;
+	bottom: 3%;
+	position: fixed;
+	background-repeat: no-repeat;
+}
+
+#topic-modal-button:hover {
+	opacity: 0.1;
+}
+
+#svg1 {
+	height: 25px;
+	width: 25px;
+	position: relative;
+	z-index: 1500;
+}
+
+#svg2 {
+	height: 30px;
+	width: 30px;
+	position: relative;
+	z-index: 99;
+}
+
+#myModalLabel {
+	display: inline-block;
+	background-color: white;
+	width: 9em;
+}
+
+#logoBild {
+	margin-top: -10px;
+	margin-left: -15px;
+	height: 180px;
+	width: 180px;
+}
+
+#animationButton {
+	border-radius: 50px;
+	outline: none;
+	background-color: transparent;
+	border-width: 1px;
+	margin-left: 925px;
+	margin-top: -20px;
+	padding: none;
+}
+
+#animationButton:hover {
+	border-width: 2px !important;
+	border-color: rgb(65, 149, 219) !important;
 }
 
