@@ -81,33 +81,33 @@
         
         function menu(evt) {
 
-            var trigger = document.getElementById("trigger");
-            var trigger1 = document.getElementById("trigger1");
+            var subjectRotation = document.getElementById("subjectRotation");
+            var subjectColor1 = document.getElementById("subjectColor1");
 
 
             if(typeof clicked === 'undefined') {
 
                 clicked = true;
 
-                trigger.setAttribute("from", "0 50 50");
-                trigger.setAttribute("to", "360 50 50");
-                trigger1.setAttribute("from", "white");
-                trigger1.setAttribute("to", "black");
+                subjectRotation.setAttribute("from", "0 50 50");
+                subjectRotation.setAttribute("to", "360 50 50");
+                subjectColor1.setAttribute("from", "white");
+                subjectColor1.setAttribute("to", "black");
 
             } else {
 
                 delete clicked;
 
-                trigger.setAttribute("from", "360 50 50");
-                trigger.setAttribute("to", "0 50 50");
-                trigger1.setAttribute("from", "black");
-                trigger1.setAttribute("to", "white");
+                subjectRotation.setAttribute("from", "360 50 50");
+                subjectRotation.setAttribute("to", "0 50 50");
+                subjectColor1.setAttribute("from", "black");
+                subjectColor1.setAttribute("to", "white");
             }
     }]]>
 </script>
     <polygon id="topic-poly" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="50.067,8.743 63.492,35.943 
     93.509,40.306 71.789,61.479 76.916,91.375 50.067,77.259 23.218,91.375 28.346,61.479 6.625,40.306 36.642,35.943 ">
-                            <animateTransform id="trigger"
+                            <animateTransform id="subjectRotation"
                                         attributeName="transform" 
                                         attributeType="XML" 
                                         type="rotate" 
@@ -118,7 +118,7 @@
                                         repeatCount="1"
                                         fill="freeze"
                                         additive="replace" />
-                                        <animate id="trigger1"
+                                        <animate id="subjectColor1"
                                         attributeName="fill" 
                                         from="white" 
                                         to="black" 
@@ -160,33 +160,33 @@
         
         function menu1(evt) {
 
-            var starJohan = document.getElementById("starJohan");
-            var starJohan1 = document.getElementById("starJohan1");
+            var starRotation = document.getElementById("starRotation");
+            var starColor1 = document.getElementById("starColor1");
 
 
             if(typeof clicked === 'undefined') {
 
                 clicked = true;
 
-                starJohan.setAttribute("from", "0 50 50");
-                starJohan.setAttribute("to", "360 50 50");
-                starJohan1.setAttribute("from", "white");
-                starJohan1.setAttribute("to", "black");
+                starRotation.setAttribute("from", "0 50 50");
+                starRotation.setAttribute("to", "360 50 50");
+                starColor1.setAttribute("from", "white");
+                starColor1.setAttribute("to", "black");
 
             } else {
 
                 delete clicked;
 
-                starJohan.setAttribute("from", "360 50 50");
-                starJohan.setAttribute("to", "0 50 50");
-                starJohan1.setAttribute("from", "black");
-                starJohan1.setAttribute("to", "white");
+                starRotation.setAttribute("from", "360 50 50");
+                starRotation.setAttribute("to", "0 50 50");
+                starColor1.setAttribute("from", "black");
+                starColor1.setAttribute("to", "white");
             }
     }]]>
 </script>
     <polygon fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="50.067,8.743 63.492,35.943 
     93.509,40.306 71.789,61.479 76.916,91.375 50.067,77.259 23.218,91.375 28.346,61.479 6.625,40.306 36.642,35.943 ">
-                            <animateTransform id="starJohan"
+                            <animateTransform id="starRotation"
                                         attributeName="transform" 
                                         attributeType="XML" 
                                         type="rotate" 
@@ -197,7 +197,7 @@
                                         repeatCount="1"
                                         fill="freeze"
                                         additive="replace" />
-                                        <animate id="starJohan1"
+                                        <animate id="starColor1"
                                         attributeName="fill" 
                                         from="white" 
                                         to="black" 
@@ -234,33 +234,33 @@
         
         function menu2(evt) {
 
-            var starTim = document.getElementById("starTim");
-            var starTim1 = document.getElementById("starTim1");
+            var starRotationTim = document.getElementById("starRotationTim");
+            var starRotationTim1 = document.getElementById("starRotationTim1");
 
 
             if(typeof clicked === 'undefined') {
 
                 clicked = true;
 
-                starTim.setAttribute("from", "0 50 50");
-                starTim.setAttribute("to", "360 50 50");
-                starTim1.setAttribute("from", "white");
-                starTim1.setAttribute("to", "black");
+                starRotationTim.setAttribute("from", "0 50 50");
+                starRotationTim.setAttribute("to", "360 50 50");
+                starRotationTim1.setAttribute("from", "white");
+                starRotationTim1.setAttribute("to", "black");
 
             } else {
 
                 delete clicked;
 
-                starTim.setAttribute("from", "360 50 50");
-                starTim.setAttribute("to", "0 50 50");
-                starTim1.setAttribute("from", "black");
-                starTim1.setAttribute("to", "white");
+                starRotationTim.setAttribute("from", "360 50 50");
+                starRotationTim.setAttribute("to", "0 50 50");
+                starRotationTim1.setAttribute("from", "black");
+                starRotationTim1.setAttribute("to", "white");
             }
     }]]>
 </script>
     <polygon fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="50.067,8.743 63.492,35.943 
     93.509,40.306 71.789,61.479 76.916,91.375 50.067,77.259 23.218,91.375 28.346,61.479 6.625,40.306 36.642,35.943 ">
-                            <animateTransform id="starTim"
+                            <animateTransform id="starRotationTim"
                                         attributeName="transform" 
                                         attributeType="XML" 
                                         type="rotate" 
@@ -271,7 +271,7 @@
                                         repeatCount="1"
                                         fill="freeze"
                                         additive="replace" />
-                                        <animate id="starTim1"
+                                        <animate id="starRotationTim1"
                                         attributeName="fill" 
                                         from="white" 
                                         to="black" 
