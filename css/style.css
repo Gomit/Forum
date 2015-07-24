@@ -1,7 +1,7 @@
 body {
 	padding-top:70px;
 }body.bg{
-	background: url("/img/bg.jpg");
+	background: url("/img/bg2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	color:white;
@@ -189,3 +189,17 @@ body {
 	border-color: rgb(65, 149, 219) !important;
 }
 
+.welcomeMailfill {
+	border-radius: 0px;
+}
+
+#welcomeLogga {
+	height: 200px;
+	width: 200px;
+	margin-left: 175px;
+	margin-top: -65px;
+}
+
+.welcomeText {
+	margin-top: -65px;
+}
