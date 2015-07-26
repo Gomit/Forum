@@ -3,9 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-<rect x="8.144" y="35.167" fill="none" width="93.188" height="19.629"/>
-<text transform="matrix(1 0 0 1 8.1436 48.6206)" fill="#FFFFFF" font-family="'Code'" font-size="24">KLAAR</text>
-<rect x="7.728" y="50.879" fill="none" width="87.333" height="18.333"/>
-<text transform="matrix(1 0 0 1 7.7275 54.2422)" fill="#FFFFFF" font-family="'Code'" font-size="6">#1 forum since 2015</text>
-<rect x="7.698" y="56.209" fill="#FFFFFF" width="83.302" height="0.166"/>
+<path fill="none" stroke="#020202" stroke-width="3" stroke-miterlimit="10" d="M50.045,27.933
+	C25.864,27.933,6.26,42.544,6.26,60.57c0,8.652,4.525,16.512,11.896,22.354L9.5,95.582l19.928-6.215
+	c6.145,2.449,13.162,3.844,20.617,3.844c24.184,0,43.786-14.615,43.786-32.641C93.831,42.543,74.229,27.933,50.045,27.933z"/>
 </svg>

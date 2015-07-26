@@ -131,16 +131,16 @@ body {
 
 .modal-button {
 	border-radius: 0px;
-}
+	z-index: 5;
 
-.btn-default.modal-button {
-	margin-left: 88.999%;
 }
 
 #topic-modal-button {
 	bottom: 3%;
 	position: fixed;
 	background-repeat: no-repeat;
+	border-radius: 0px;
+	background-color: #2BADE3;
 }
 
 #topic-modal-button:hover {
@@ -151,14 +151,14 @@ body {
 	height: 25px;
 	width: 25px;
 	position: relative;
-	z-index: 1500;
+	z-index: 2;
 }
 
 #svg2 {
 	height: 30px;
 	width: 30px;
 	position: relative;
-	z-index: 99;
+	z-index: 2;
 }
 
 #myModalLabel {
@@ -168,38 +168,174 @@ body {
 }
 
 #logoBild {
-	margin-top: -10px;
-	margin-left: -15px;
+	margin-top: -2.5em;
+	margin-left: 0.01em;
 	height: 180px;
 	width: 180px;
 }
 
 #animationButton {
-	border-radius: 50px;
-	outline: none;
+	border-radius: 30px;
+	outline: 0;
 	background-color: transparent;
-	border-width: 1px;
-	margin-left: 925px;
-	margin-top: -20px;
-	padding: none;
+	height:4.5em;
+	width:4.5em;
+	margin: 1em;
+	border: -5px solid white;
 }
 
 #animationButton:hover {
-	border-width: 2px !important;
 	border-color: rgb(65, 149, 219) !important;
+	background-color: white;
+	border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
 }
 
 .welcomeMailfill {
 	border-radius: 0px;
+    resize: none;
+    outline: none;
 }
 
 #welcomeLogga {
 	height: 200px;
 	width: 200px;
-	margin-left: 175px;
-	margin-top: -65px;
 }
 
 .welcomeText {
-	margin-top: -65px;
+	margin-top: -5em;
+	margin-right: -8em;
+	margin-left: -8em;
 }
+
+#animationButtonWelcome {
+	border-radius: 50px;
+	outline: none;
+	background-color: transparent;
+	border-width: 1px;
+	margin-top: 4.4em;
+	margin-right: 4em;
+}
+
+#animationButtonWelcome:hover {
+	border-width: 2px !important;
+	border-color: rgb(65, 149, 219) !important;
+}
+
+#logoBildWelcome {
+	margin-top: 0.01em;
+	margin-left: 0em;
+	height: 180px;
+	width: 180px;
+}
+
+.topic-svar {
+	font-color: rgb(65, 149, 219);
+	font-size: 0.9em;
+	margin: 1em;
+}
+
+#topic-path1 {
+	border-radius: 100px;
+	outline: none;
+	background-color: transparent;
+	border-width: 1px;
+}
+
+#topic-path1:hover {
+	border-width: 2px !important;
+	border-color: rgb(65, 149, 219) !important;
+} 
+
+#topic-star1 {
+	border-radius: 100px;
+	outline: none;
+	background-color: transparent;
+	border-width: 1px;
+	margin-bottom: 1em;
+}
+
+#topic-star1:hover {
+	border-width: 2px !important;
+	border-color: rgb(65, 149, 219) !important;
+}
+
+#topic-path2 {
+	border-radius: 100px;
+	outline: none;
+	background-color: transparent;
+	border-width: 1px;
+	margin-bottom: 1em;
+}
+
+#topic-path2:hover {
+	border-width: 2px !important;
+	border-color: rgb(65, 149, 219) !important;
+} 
+
+#topic-star2 {
+	border-radius: 100px;
+	outline: none;
+	background-color: transparent;
+	border-width: 1px;
+	margin-bottom: 1em;
+}
+
+#topic-star2:hover {
+	border-width: 2px !important;
+	border-color: rgb(65, 149, 219) !important;
+}
+
+#topic-path3 {
+	border-radius: 100px;
+	outline: none;
+	background-color: transparent;
+	border-width: 1px;
+	margin-bottom: 1em;
+}
+
+#topic-path3:hover {
+	border-width: 2px !important;
+	border-color: rgb(65, 149, 219) !important;
+} 
+
+#topic-star3 {
+	border-radius: 100px;
+	outline: none;
+	background-color: transparent;
+	border-width: 1px;
+	margin-bottom: 1em;
+}
+
+#topic-star3:hover {
+	border-width: 2px !important;
+	border-color: rgb(65, 149, 219) !important;
+}
+
+#topic-more1 {
+	border-radius: 100px;
+	outline: none;
+	background-color: transparent;
+	border-width: 1px;
+	margin-bottom: 1em;
+	height:2.8em;
+	width:2.8em;
+}
+
+#topic-more1:hover {
+	border-width: 2px !important;
+	border-color: rgb(65, 149, 219) !important;
+} 
+
+#profilbildStl {
+	height:4.5em;
+	width:4.5em;
+	margin: 1em;
+}
+
+#profilbildComment {
+	height: 5.5em;
+	width: 5.5em;
+	margin-bottom: 1em;
+}
+

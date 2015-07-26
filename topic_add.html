@@ -31,26 +31,38 @@
   <body>
 
     <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="#">Trådar</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">LOGGA</h3>
-      </div>
+        <nav class="navbar navbar-fixed-top" style="z-index: 0;">
+            <img src="klaar4.svg" id="logoBildWelcome">
+      <button class="pull-right" id="animationButtonWelcome">
+    <svg viewBox="0 0 100 100" id="svg2">
+<polygon 
+        fill="black"
+        points="24.25,40.442 48.357,40.442 
+  62.523,40.442 77.25,40.442 50,88.625 43.875,78 39.625,70.75 36.5,65.5 33.125,59.625 29.375,53.25 25.625,46.875 21.875,40.458">
 
+    <animate 
+      id="animationToCross"
+        begin="click" 
+        attributeName="points" 
+        dur="200ms"
+        to="81.061,87.061 53.25,59.25 80.273,32.227 
+  78.309,30.261 51.284,57.284 23.868,29.868 21.902,31.833 49.318,59.25 21.116,87.453 23.082,89.418 51.284,61.216 79.094,89.023"
+        fill="freeze" />
+</polygon>
+  </svg>
+      </button>
+      </div>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <form id="add-post-form" method="post" action="/test">
             <div class="form-group">
-              <input name="title" type="text" id="title" class="form-control" placeholder="Rubrik">
+              <input name="title" type="text" id="title" class="form-control welcomeMailfill" placeholder="Ämnesrubrik">
             </div>
             <div class="form-group">
-              <textarea class="form-control" id="body" rows="3" placeholder="Beskrivning"></textarea>
+              <textarea class="form-control welcomeMailfill" id="body" rows="10" placeholder="Beskrivning"></textarea>
             </div>
             <div class="checkbox"></div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary welcomeMailfill">Submit</button>
           </form>
         </div>
       </div>
