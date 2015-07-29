@@ -23,42 +23,10 @@
 <body>
 	<nav class="navbar navbar-fixed-top">
       <div class="container" style="height: 7em; width:100%; background-color: #F15F63;">
-      	<input type="image" src="profilbild.svg" id="animationButton" class="pull-right">
-
-      <!--  <button id="animationButton" class="pull-right">
-            <svg viewBox="0 0 100 100" id="svg2" fill="white" stroke="#000000" stroke-width="3" stroke-miterlimit="10" >
-                <polygon 
-                    fill="white"
-                    points="79.331,92.749 22.897,60.396 79.011,28 
-    74.081,37.124 70.333,44 68.331,47.624 66.081,51.749 63.331,56.749 61.581,59.874 61.331,60.5 63.208,63.874 65.706,68.374 
-    67.831,72.125 71.707,78.874 75.081,84.875 ">
-
-                <animate 
-                    id="animationToCross"
-                    begin="click" 
-                    attributeName="points" 
-                    dur="200ms"
-                    to="15.501,30.417 15.501,30.417 15.501,30.417 
-    21.167,25.25 50.167,54.5 78.583,25.833 83.75,30.667 55.542,59.583 85.292,89.208 80.042,94.333 49.917,65.083 20.417,94.833 
-    15.167,89.708 44.542,59.708 15.501,30.417"
-                    fill="freeze" />
-                </polygon>
-            </svg>
-        </button> -->
-          		<img src="klaar4vit.svg" id="logoBild" class="pull-left" style="z-index: -10;">
-         <!-- </ul>
-          <ul class="nav navbar-nav menu-items">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="useremail"></span><span class="caret"></span></a>
-              <ul class="dropdown-menu">
-              	<li><a href="topic-add.html">Ämnen</a></li>
-                <li><a href="#" class="logout">Logga ut</a></li>
-              </ul>
-            </li>
-          </ul> -->
-       <!-- </div> <!-- /.nav-collapse -->
-     </div> <!--/.container -->
-    </nav> -->
+      	<input type="image" src="profilbild.svg" id="animationButton" class="pull-right"> <!-- profilbild i nav -->
+      	<img src="klaar4vit.svg" id="logoBild" class="pull-left" style="z-index: -10;"> <!-- loggan i nav -->
+     </div> 
+    </nav>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
@@ -66,207 +34,20 @@
 					<div class="text-center">
 						<h3 class="text-center" id="topic-title"></h3>
 					</div>
-					<div class="row mt2" style="border: outset 1px #DDD;">
+					<div class="row mt2" style="border: outset 1px #DDD; box-shadow: 10px 10px 5px #888888;"> <!-- första blockets styling -->
 						<div class="col-md-1">						
 							<div>
 							</br>
-						</br>
-								<button id="topic-star3">
-								<svg onclick="menu(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								</br>
+								<button id="topic-star1"> <!-- .SVG-knappen som föreställer en stjärna -->
+								<svg onclick="star1(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
 <script type="application/ecmascript">
     <![CDATA[
         
-        function menu(evt) {
+        function star1(evt) {
 
-            var subjectRotation = document.getElementById("subjectRotation");
-            var subjectColor1 = document.getElementById("subjectColor1");
-
-
-            if(typeof clicked === 'undefined') {
-
-                clicked = true;
-
-                subjectRotation.setAttribute("from", "0 50 55");
-                subjectRotation.setAttribute("to", "360 50 55");
-                subjectColor1.setAttribute("from", "white");
-                subjectColor1.setAttribute("to", "rgb(240, 231, 136)");
-
-            } else {
-
-                delete clicked;
-
-                subjectRotation.setAttribute("from", "360 50 55");
-                subjectRotation.setAttribute("to", "0 50 55");
-                subjectColor1.setAttribute("from", "rgb(240, 231, 136)");
-                subjectColor1.setAttribute("to", "white");
-            }
-    }]]>
-</script>
-    <polygon id="topic-poly" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="49.817,13.993 63.242,41.193 
-	93.259,45.556 71.539,66.729 76.666,96.625 49.817,82.509 22.968,96.625 28.096,66.729 6.375,45.556 36.392,41.193 ">
-    <animateTransform id="subjectRotation"
-                      attributeName="transform" 
-                      attributeType="XML" 
-                      type="rotate" 
-                      from="0 50 55" 
-                      to="360 50 55" 
-                      begin="click" 
-                      dur="450ms" 
-                      repeatCount="1"
-                      fill="freeze"
-                      additive="replace" />
-    <animate id="subjectColor1"
-                      attributeName="fill" 
-                      from="white" 
-                      to="rgb(240, 231, 136)" 
-                      repeatCount="1" 
-                      begin="click"
-                      dur="300ms" 
-                      fill="freeze"
-                      additive="replace" />
-
-    </polygon>
-							</svg>
-						</button>
-							<button id="topic-path3">
-								<svg onclick="comment3(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
-<script type="application/ecmascript">
-    <![CDATA[
-        
-        function comment3(evt) {
-
-            var commentTurnBlack2 = document.getElementById("commentTurnBlack2");
-
-
-            if(typeof clicked === 'undefined') {
-
-                clicked = true;
-
-                commentTurnBlack2.setAttribute("from", "white");
-                commentTurnBlack2.setAttribute("to", "rgb(223, 223, 218)");
-
-            } else {
-
-                delete clicked;
-
-                commentTurnBlack2.setAttribute("from", "rgb(223, 223, 218)");
-                commentTurnBlack2.setAttribute("to", "white");
-            }
-    }]]>
-</script>
-    <path id="topic-path" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M50.045,27.933
-	C25.864,27.933,6.26,42.544,6.26,60.57c0,8.652,4.525,16.512,11.896,22.354L9.5,95.582l19.928-6.215
-	c6.145,2.449,13.162,3.844,20.617,3.844c24.184,0,43.786-14.615,43.786-32.641C93.831,42.543,74.229,27.933,50.045,27.933z">
-
-    <animate          id="commentTurnBlack2"
-                      attributeName="fill" 
-                      from="white" 
-                      to="rgb(223, 223, 218)" 
-                      repeatCount="1" 
-                      begin="click"
-                      dur="300ms" 
-                      fill="freeze" />
-
-    </polygon>
-    					</button>
-                            </svg>
-                             							<button id="topic-more1">
-							<svg onclick="more2(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
-<script type="application/ecmascript">
-    <![CDATA[
-        
-        function more2(evt) {
-
-            var arrowRotation2 = document.getElementById("arrowRotation2");
-            var arrowColor2 = document.getElementById("arrowColor2	");
-
-
-            if(typeof clicked === 'undefined') {
-
-                clicked = true;
-
-                arrowRotation2.setAttribute("from", "0 50 64");
-                arrowRotation2.setAttribute("to", "180 50 64");
-                arrowColor2.setAttribute("from", "white");
-                arrowColor2.setAttribute("to", "black");
-
-            } else {
-
-                delete clicked;
-
-                arrowRotation2.setAttribute("from", "180 50 64");
-                arrowRotation2.setAttribute("to", "0 50 64");
-                arrowColor2.setAttribute("from", "black");
-                arrowColor2.setAttribute("to", "white");
-            }
-    }]]>
-</script>
-    <polygon fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="85.777,35.996 50.312,71.462 14.43,35.58 
-	4.413,45.598 50.305,91.505 95.795,46.014">
-    <animateTransform id="arrowRotation2"
-                      attributeName="transform" 
-                      attributeType="XML" 
-                      type="rotate" 
-                      from="0 50 64" 
-                      to="180 50 64" 
-                      begin="click" 
-                      dur="450ms" 
-                      repeatCount="1"
-                      fill="freeze"
-                      additive="replace" />
-    <animate 		  id="arrowColor2"
-                      attributeName="fill" 
-                      from="white" 
-                      to="black" 
-                      repeatCount="1" 
-                      begin="click"
-                      dur="250ms" 
-                      fill="freeze"
-                      additive="replace" />
-
-    </polygon>
-							</svg>
-							</button>
-						</div>
-					</div>
-				</br>
-						<div class="col-md-9" id="topic-body"><strong style="font-size: 16px;">Här kommer förslag på hackathon-datum!</strong>
-						<p>
-						</br>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum...
-						</p>
-					</br>
-						<div style="margin-bottom: 1em;"><span class="topic-svar">2 minuter sedan av <i style="color: rgb(65, 149, 219);">Elias Svensson</i></span></div></div>
-						<div class="col-md-2"><img src="profilbild.svg" id="profilbildComment" class="pull-right"/></div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-		<div class="row mt2">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="row" style="border: outset 1px #DDD;">
-					<div class="col-md-1">
-						<div>
-						</br>
-					</br>
-							<button id="topic-star1">
-							<svg onclick="menu1(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
-<script type="application/ecmascript">
-    <![CDATA[
-        
-        function menu1(evt) {
-
-            var starRotation = document.getElementById("starRotation");
+            var starRotation1 = document.getElementById("starRotation1");
             var starColor1 = document.getElementById("starColor1");
 
 
@@ -274,8 +55,8 @@
 
                 clicked = true;
 
-                starRotation.setAttribute("from", "0 50 55");
-                starRotation.setAttribute("to", "360 50 55");
+                starRotation1.setAttribute("from", "0 50 55");
+                starRotation1.setAttribute("to", "360 50 55");
                 starColor1.setAttribute("from", "white");
                 starColor1.setAttribute("to", "rgb(240, 231, 136)");
 
@@ -283,16 +64,17 @@
 
                 delete clicked;
 
-                starRotation.setAttribute("from", "360 50 55");
-                starRotation.setAttribute("to", "0 50 55");
+                starRotation1.setAttribute("from", "360 50 55");
+                starRotation1.setAttribute("to", "0 50 55");
                 starColor1.setAttribute("from", "rgb(240, 231, 136)");
                 starColor1.setAttribute("to", "white");
             }
     }]]>
 </script>
-    <polygon id="topic-poly" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="49.817,13.993 63.242,41.193 
+    <polygon fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="49.817,13.993 63.242,41.193 
 	93.259,45.556 71.539,66.729 76.666,96.625 49.817,82.509 22.968,96.625 28.096,66.729 6.375,45.556 36.392,41.193 ">
-    <animateTransform id="starRotation"
+    
+    <animateTransform id="starRotation1"
                       attributeName="transform" 
                       attributeType="XML" 
                       type="rotate" 
@@ -303,6 +85,7 @@
                       repeatCount="1"
                       fill="freeze"
                       additive="replace" />
+   
     <animate 		  id="starColor1"
                       attributeName="fill" 
                       from="white" 
@@ -316,15 +99,17 @@
     </polygon>
 							</svg>
 							</button>
-							<button id="topic-path1">
-							            <svg onclick="comment2(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+
+              <button id="topic-comment1"> <!-- .SVG-knappen som föreställer en pratbubbla -->
+                <svg onclick="comment1(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
 <script type="application/ecmascript">
     <![CDATA[
         
-        function comment2(evt) {
+        function comment1(evt) {
 
             var commentTurnBlack1 = document.getElementById("commentTurnBlack1");
+            var commentFlip1 = document.getElementById("commentFlip1");
 
 
             if(typeof clicked === 'undefined') {
@@ -332,78 +117,107 @@
                 clicked = true;
 
                 commentTurnBlack1.setAttribute("from", "white");
-                commentTurnBlack1.setAttribute("to", "rgb(223, 223, 218)");
+                commentTurnBlack1.setAttribute("to", "black");
+                commentFlip1.setAttribute("from", "0 50 50");
+                commentFlip1.setAttribute("to", "180 51 61");
 
             } else {
 
                 delete clicked;
 
-                commentTurnBlack1.setAttribute("from", "rgb(223, 223, 218)");
+                commentTurnBlack1.setAttribute("from", "black");
                 commentTurnBlack1.setAttribute("to", "white");
+                commentFlip1.setAttribute("from", "180 51 61");
+                commentFlip1.setAttribute("to", "0 50 50");
             }
     }]]>
 </script>
-    <path id="topic-path" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M50.045,27.933
-	C25.864,27.933,6.26,42.544,6.26,60.57c0,8.652,4.525,16.512,11.896,22.354L9.5,95.582l19.928-6.215
-	c6.145,2.449,13.162,3.844,20.617,3.844c24.184,0,43.786-14.615,43.786-32.641C93.831,42.543,74.229,27.933,50.045,27.933z">
+    <path fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M29.594,89.034
+    c6.146,2.449,13.162,3.844,20.617,3.844c24.184,0,43.786-14.615,43.786-32.641c0-18.027-19.603-32.637-43.786-32.637
+    c-24.182,0-43.785,14.61-43.785,32.637c0,8.652,4.525,16.512,11.896,22.354l-1.406,1.951l-2.625,3.75l-1.875,2.75l-1.75,2.625
+    l-1,1.625l7.875-2.375l3.25-1l3.25-1L29.594,89.034z">
+                    
+    <animateTransform 
+                      id="commentFlip1"
+                      attributeName="transform" 
+                      attributeType="XML" 
+                      type="rotate" 
+                      from="0 50 55" 
+                      to="180 51 61" 
+                      begin="click" 
+                      dur="450ms" 
+                      repeatCount="1"
+                      fill="freeze"
+                      additive="replace" />
 
-    <animate          id="commentTurnBlack1"
+    <animate 
+                    begin="click" 
+                    attributeName="d" 
+                    dur="500ms"
+                    to="M79.041,27L51.166,55.166L23,26.833L17.5,32.5
+  l8.594,9.094L26.5,42l18.542,19.25L16.833,89.666l5.5,5.668L50.833,67l29,29l6.083-6.041L57,61l28.166-28.333L79.041,27z"
+                    fill="freeze" />
+
+    <animate          
+                      id="commentTurnBlack1"
                       attributeName="fill" 
                       from="white" 
-                      to="rgb(223, 223, 218)" 
+                      to="black" 
                       repeatCount="1" 
                       begin="click"
-                      dur="300ms" 
+                      dur="1s" 
                       fill="freeze" />
 
     </polygon>
-    	</button>
-    							<button id="topic-more1" style="margin-top:1em;">
-							<svg onclick="more3(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              </button>
+                            </svg>
+                            <button id="topic-arrow1"> <!-- .SVG-knappen som föreställer en pil -->
+              <svg onclick="arrow1(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
 <script type="application/ecmascript">
     <![CDATA[
         
-        function more3(evt) {
+        function arrow1(evt) {
 
-            var arrowRotation3 = document.getElementById("arrowRotation3");
-            var arrowColor3 = document.getElementById("arrowColor3");
+            var arrowRotation1 = document.getElementById("arrowRotation1");
+            var arrowColor1 = document.getElementById("arrowColor1");
 
 
             if(typeof clicked === 'undefined') {
 
                 clicked = true;
 
-                arrowRotation3.setAttribute("from", "0 50 64");
-                arrowRotation3.setAttribute("to", "180 50 64");
-                arrowColor3.setAttribute("from", "white");
-                arrowColor3.setAttribute("to", "black");
+                arrowRotation1.setAttribute("from", "0 50 72");
+                arrowRotation1.setAttribute("to", "180 50 65");
+                arrowColor1.setAttribute("from", "white");
+                arrowColor1.setAttribute("to", "black");
 
             } else {
 
                 delete clicked;
 
-                arrowRotation3.setAttribute("from", "180 50 64");
-                arrowRotation3.setAttribute("to", "0 50 64");
-                arrowColor3.setAttribute("from", "black");
-                arrowColor3.setAttribute("to", "white");
+                arrowRotation1.setAttribute("from", "180 50 65");
+                arrowRotation1.setAttribute("to", "0 50 72");
+                arrowColor1.setAttribute("from", "black");
+                arrowColor1.setAttribute("to", "white");
             }
     }]]>
 </script>
-    <polygon fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="85.777,35.996 50.312,71.462 14.43,35.58 
-	4.413,45.598 50.305,91.505 95.795,46.014">
-    <animateTransform id="arrowRotation3"
+    <polygon fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="50.237,80.905 18.12,48.25 4.058,48.25 
+  50.118,95.081 96.18,48.25 82.357,48.25 ">
+
+    <animateTransform id="arrowRotation1"
                       attributeName="transform" 
                       attributeType="XML" 
                       type="rotate" 
-                      from="0 50 64" 
-                      to="180 50 64" 
+                      from="0 50 72" 
+                      to="180 50 65" 
                       begin="click" 
                       dur="450ms" 
                       repeatCount="1"
                       fill="freeze"
                       additive="replace" />
-    <animate 		  id="arrowColor3"
+    <animate          id="arrowColor1"
                       attributeName="fill" 
                       from="white" 
                       to="black" 
@@ -414,11 +228,229 @@
                       additive="replace" />
 
     </polygon>
-							</svg>
-							</button>
+              			</svg>
+              			</button>
 						</div>
 					</div>
-				</br>
+					</br> <!-- första blockets text & profilbild -->
+						<div class="col-md-9" id="topic-body"><strong style="font-size: 16px;">Här kommer förslag på hackathon-datum!</strong>
+						<p>
+					</br>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum...
+						</p>
+					</br>
+						<div style="margin-bottom: 1em;"><span class="topic-svar">2 minuter sedan av <i style="color: rgb(65, 149, 219);">Elias Svensson</i></span></div></div>
+						<div class="col-md-2"><img src="profilbild.svg" id="profilbildComment" class="pull-right"/></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt2">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="row" style="border: outset 1px #DDD; box-shadow: 10px 10px 5px #888888;"> <!-- första blockets styling -->
+					<div class="col-md-1">
+						<div>
+						</br>
+					</br>
+							<button id="topic-star1"> <!-- andra .SVG-knappen som föreställer en stjärna -->
+							<svg onclick="star2(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
+<script type="application/ecmascript">
+    <![CDATA[
+        
+        function star2(evt) {
+
+            var starRotation2 = document.getElementById("starRotation2");
+            var starColor2 = document.getElementById("starColor2");
+
+
+            if(typeof clicked === 'undefined') {
+
+                clicked = true;
+
+                starRotation2.setAttribute("from", "0 50 55");
+                starRotation2.setAttribute("to", "360 50 55");
+                starColor2.setAttribute("from", "white");
+                starColor2.setAttribute("to", "rgb(240, 231, 136)");
+
+            } else {
+
+                delete clicked;
+
+                starRotation2.setAttribute("from", "360 50 55");
+                starRotation2.setAttribute("to", "0 50 55");
+                starColor2.setAttribute("from", "rgb(240, 231, 136)");
+                starColor2.setAttribute("to", "white");
+            }
+    }]]>
+</script>
+    <polygon fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="49.817,13.993 63.242,41.193 
+	93.259,45.556 71.539,66.729 76.666,96.625 49.817,82.509 22.968,96.625 28.096,66.729 6.375,45.556 36.392,41.193 ">
+    
+    <animateTransform 
+    				  id="starRotation2"
+                      attributeName="transform" 
+                      attributeType="XML" 
+                      type="rotate" 
+                      from="0 50 55" 
+                      to="360 50 55" 
+                      begin="click" 
+                      dur="450ms" 
+                      repeatCount="1"
+                      fill="freeze"
+                      additive="replace" />
+    <animate 		  
+    				  id="starColor2"
+                      attributeName="fill" 
+                      from="white" 
+                      to="rgb(240, 231, 136)" 
+                      repeatCount="1" 
+                      begin="click"
+                      dur="300ms" 
+                      fill="freeze"
+                      additive="replace" />
+
+    </polygon>
+							</svg>
+							</button>
+              				<button id="topic-comment1"> <!-- andra .SVG-knappen som föreställer en kommentar -->
+                			<svg onclick="comment2(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
+<script type="application/ecmascript">
+    <![CDATA[
+        
+        function comment2(evt) {
+
+            var commentColor2 = document.getElementById("commentColor2");
+            var commentRotation2 = document.getElementById("commentRotation2");
+
+
+            if(typeof clicked === 'undefined') {
+
+                clicked = true;
+
+                commentColor2.setAttribute("from", "white");
+                commentColor2.setAttribute("to", "black");
+                commentRotation2.setAttribute("from", "0 50 50");
+                commentRotation2.setAttribute("to", "180 51 61");
+
+            } else {
+
+                delete clicked;
+
+                commentColor2.setAttribute("from", "black");
+                commentColor2.setAttribute("to", "white");
+                commentRotation2.setAttribute("from", "180 51 61");
+                commentRotation2.setAttribute("to", "0 50 50");
+            }
+    }]]>
+</script>
+    <path fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M29.594,89.034
+    c6.146,2.449,13.162,3.844,20.617,3.844c24.184,0,43.786-14.615,43.786-32.641c0-18.027-19.603-32.637-43.786-32.637
+    c-24.182,0-43.785,14.61-43.785,32.637c0,8.652,4.525,16.512,11.896,22.354l-1.406,1.951l-2.625,3.75l-1.875,2.75l-1.75,2.625
+    l-1,1.625l7.875-2.375l3.25-1l3.25-1L29.594,89.034z">
+                    
+    <animateTransform 
+                      id="commentRotation2"
+                      attributeName="transform" 
+                      attributeType="XML" 
+                      type="rotate" 
+                      from="0 50 55" 
+                      to="180 51 61" 
+                      begin="click" 
+                      dur="450ms" 
+                      repeatCount="1"
+                      fill="freeze"
+                      additive="replace" />
+
+    <animate 
+                    begin="click" 
+                    attributeName="d" 
+                    dur="500ms"
+                    to="M79.041,27L51.166,55.166L23,26.833L17.5,32.5
+  l8.594,9.094L26.5,42l18.542,19.25L16.833,89.666l5.5,5.668L50.833,67l29,29l6.083-6.041L57,61l28.166-28.333L79.041,27z"
+                    fill="freeze" />
+
+    <animate          
+                      id="commentColor2"
+                      attributeName="fill" 
+                      from="white" 
+                      to="black" 
+                      repeatCount="1" 
+                      begin="click"
+                      dur="1s" 
+                      fill="freeze" />
+
+    </polygon>
+              				</button>
+                            </svg>
+                            <button id="topic-arrow1"> <!-- andra .SVG-knappen som föreställer en pil -->
+              				<svg onclick="arrow2(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
+<script type="application/ecmascript">
+    <![CDATA[
+        
+        function arrow2(evt) {
+
+            var arrowRotation2 = document.getElementById("arrowRotation2");
+            var arrowColor2 = document.getElementById("arrowColor2");
+
+
+            if(typeof clicked === 'undefined') {
+
+                clicked = true;
+
+                arrowRotation2.setAttribute("from", "0 50 72");
+                arrowRotation2.setAttribute("to", "180 50 65");
+                arrowColor2.setAttribute("from", "white");
+                arrowColor2.setAttribute("to", "black");
+
+            } else {
+
+                delete clicked;
+
+                arrowRotation2.setAttribute("from", "180 50 65");
+                arrowRotation2.setAttribute("to", "0 50 72");
+                arrowColor2.setAttribute("from", "black");
+                arrowColor2.setAttribute("to", "white");
+            }
+    }]]>
+</script>
+    <polygon fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="50.237,80.905 18.12,48.25 4.058,48.25 
+  50.118,95.081 96.18,48.25 82.357,48.25 ">
+
+    <animateTransform id="arrowRotation2"
+                      attributeName="transform" 
+                      attributeType="XML" 
+                      type="rotate" 
+                      from="0 50 72" 
+                      to="180 50 65" 
+                      begin="click" 
+                      dur="450ms" 
+                      repeatCount="1"
+                      fill="freeze"
+                      additive="replace" />
+    <animate          id="arrowColor2"
+                      attributeName="fill" 
+                      from="white" 
+                      to="black" 
+                      repeatCount="1" 
+                      begin="click"
+                      dur="250ms" 
+                      fill="freeze"
+                      additive="replace" />
+
+    </polygon>
+              				</svg>
+              				</button>
+						</div>
+					</div>
+				</br> <!-- andra blockets text & profilbild -->
 						<div class="col-md-9" id="topic-body"><strong style="font-size: 16px;">Mest effektiva språket för att skapa en responsiv app?</strong>
 						<p>
 						</br>
@@ -440,46 +472,48 @@
 		</div>
 		<div class="row mt2">
 			<div class="col-md-8 col-md-offset-2">
-				<div class="row" style="border: outset 1px #DDD;">
+				<div class="row" style="border: outset 1px #DDD; box-shadow: 10px 10px 5px #888888;"> <!-- andra blockets styling-->
 					<div class="col-md-1">
 						<div>
 						</br>
 					</br>
-							<button id="topic-star2">
-							<svg onclick="menu2(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							<button id="topic-star1"> <!-- tredje .SVG-knappen som föreställer en stjärna  -->
+							<svg onclick="star3(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
 <script type="application/ecmascript">
     <![CDATA[
         
-        function menu2(evt) {
+        function star3(evt) {
 
-            var starRotationTim = document.getElementById("starRotationTim");
-            var starRotationTim1 = document.getElementById("starRotationTim1");
+            var starRotation3 = document.getElementById("starRotation3");
+            var starColor3 = document.getElementById("starColor3");
 
 
             if(typeof clicked === 'undefined') {
 
                 clicked = true;
 
-                starRotationTim.setAttribute("from", "0 50 55");
-                starRotationTim.setAttribute("to", "360 50 55");
-                starRotationTim1.setAttribute("from", "white");
-                starRotationTim1.setAttribute("to", "rgb(240, 231, 136)");
+                starRotation3.setAttribute("from", "0 50 55");
+                starRotation3.setAttribute("to", "360 50 55");
+                starColor3.setAttribute("from", "white");
+                starColor3.setAttribute("to", "rgb(240, 231, 136)");
 
             } else {
 
                 delete clicked;
 
-                starRotationTim.setAttribute("from", "360 50 55");
-                starRotationTim.setAttribute("to", "0 50 55");
-                starRotationTim1.setAttribute("from", "rgb(240, 231, 136)");
-                starRotationTim1.setAttribute("to", "white");
+                starRotation3.setAttribute("from", "360 50 55");
+                starRotation3.setAttribute("to", "0 50 55");
+                starColor3.setAttribute("from", "rgb(240, 231, 136)");
+                starColor3.setAttribute("to", "white");
             }
     }]]>
 </script>
-    <polygon id="topic-poly" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="49.817,13.993 63.242,41.193 
+    <polygon fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="49.817,13.993 63.242,41.193 
 	93.259,45.556 71.539,66.729 76.666,96.625 49.817,82.509 22.968,96.625 28.096,66.729 6.375,45.556 36.392,41.193 ">
-    <animateTransform id="starRotationTim"
+    
+    <animateTransform 
+    				  id="starRotation3"
                       attributeName="transform" 
                       attributeType="XML" 
                       type="rotate" 
@@ -490,7 +524,8 @@
                       repeatCount="1"
                       fill="freeze"
                       additive="replace" />
-    <animate 		  id="starRotationTim1"
+    <animate 		  
+    				  id="starColor3"
                       attributeName="fill" 
                       from="white" 
                       to="rgb(240, 231, 136)" 
@@ -502,96 +537,127 @@
 
     </polygon>
 							</svg>
-						</button>
-							<button id="topic-path2">
-								<svg onclick="comment1(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							</button>
+              				<button id="topic-comment1"> <!-- tredje .SVG-knappen som föreställer en pratbubbla -->
+                			<svg onclick="comment3(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
 <script type="application/ecmascript">
     <![CDATA[
         
-        function comment1(evt) {
+        function comment3(evt) {
 
-            var commentTurnBlack = document.getElementById("commentTurnBlack");
+            var commentColor3 = document.getElementById("commentColor3");
+            var commentRotation3 = document.getElementById("commentRotation3");
 
 
             if(typeof clicked === 'undefined') {
 
                 clicked = true;
 
-                commentTurnBlack.setAttribute("from", "white");
-                commentTurnBlack.setAttribute("to", "rgb(223, 223, 218)");
+                commentColor3.setAttribute("from", "white");
+                commentColor3.setAttribute("to", "black");
+                commentRotation3.setAttribute("from", "0 50 50");
+                commentRotation3.setAttribute("to", "180 51 61");
 
             } else {
 
                 delete clicked;
 
-                commentTurnBlack.setAttribute("from", "rgb(223, 223, 218)");
-                commentTurnBlack.setAttribute("to", "white");
+                commentColor3.setAttribute("from", "black");
+                commentColor3.setAttribute("to", "white");
+                commentRotation3.setAttribute("from", "180 51 61");
+                commentRotation3.setAttribute("to", "0 50 50");
             }
     }]]>
 </script>
-    <path id="topic-poly" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M50.045,27.933
-	C25.864,27.933,6.26,42.544,6.26,60.57c0,8.652,4.525,16.512,11.896,22.354L9.5,95.582l19.928-6.215
-	c6.145,2.449,13.162,3.844,20.617,3.844c24.184,0,43.786-14.615,43.786-32.641C93.831,42.543,74.229,27.933,50.045,27.933z">
-
-    <animate          id="commentTurnBlack"
-                      attributeName="fill" 
-                      from="white" 
-                      to="rgb(223, 223, 218)" 
-                      repeatCount="1" 
-                      begin="click"
-                      dur="300ms" 
-                      fill="freeze" />
-
-    </polygon>
-                            </svg>
-                        </button>
-                        						 	<button id="topic-more1">
-							<svg onclick="more1(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
-<script type="application/ecmascript">
-    <![CDATA[
-        
-        function more1(evt) {
-
-            var arrowRotation = document.getElementById("arrowRotation");
-            var arrowColor1 = document.getElementById("arrowColor1");
-
-
-            if(typeof clicked === 'undefined') {
-
-                clicked = true;
-
-                arrowRotation.setAttribute("from", "0 50 64");
-                arrowRotation.setAttribute("to", "180 50 64");
-                arrowColor1.setAttribute("from", "white");
-                arrowColor1.setAttribute("to", "black");
-
-            } else {
-
-                delete clicked;
-
-                arrowRotation.setAttribute("from", "180 50 64");
-                arrowRotation.setAttribute("to", "0 50 64");
-                arrowColor1.setAttribute("from", "black");
-                arrowColor1.setAttribute("to", "white");
-            }
-    }]]>
-</script>
-    <polygon fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="85.777,35.996 50.312,71.462 14.43,35.58 
-	4.413,45.598 50.305,91.505 95.795,46.014">
-    <animateTransform id="arrowRotation"
+    <path id="topic-path" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M29.594,89.034
+    c6.146,2.449,13.162,3.844,20.617,3.844c24.184,0,43.786-14.615,43.786-32.641c0-18.027-19.603-32.637-43.786-32.637
+    c-24.182,0-43.785,14.61-43.785,32.637c0,8.652,4.525,16.512,11.896,22.354l-1.406,1.951l-2.625,3.75l-1.875,2.75l-1.75,2.625
+    l-1,1.625l7.875-2.375l3.25-1l3.25-1L29.594,89.034z">
+                    
+    <animateTransform 
+                      id="commentRotation3"
                       attributeName="transform" 
                       attributeType="XML" 
                       type="rotate" 
-                      from="0 50 64" 
-                      to="180 50 64" 
+                      from="0 50 55" 
+                      to="180 51 61" 
                       begin="click" 
                       dur="450ms" 
                       repeatCount="1"
                       fill="freeze"
                       additive="replace" />
-    <animate 		  id="arrowColor1"
+
+    <animate 
+					  begin="click" 
+                      attributeName="d" 
+                      dur="500ms"
+                      to="M79.041,27L51.166,55.166L23,26.833L17.5,32.5
+  l8.594,9.094L26.5,42l18.542,19.25L16.833,89.666l5.5,5.668L50.833,67l29,29l6.083-6.041L57,61l28.166-28.333L79.041,27z"
+                      fill="freeze" />
+
+    <animate          
+                      id="commentColor3"
+                      attributeName="fill" 
+                      from="white" 
+                      to="black" 
+                      repeatCount="1" 
+                      begin="click"
+                      dur="1s" 
+                      fill="freeze" />
+
+    </polygon>
+              				</button>
+                            </svg>
+                            <button id="topic-arrow1">
+              				<svg onclick="arrow3(evt)" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> 
+<script type="application/ecmascript">
+    <![CDATA[
+        
+        function arrow3(evt) {
+
+            var arrowRotation3 = document.getElementById("arrowRotation3");
+            var arrowColor3 = document.getElementById("arrowColor3");
+
+
+            if(typeof clicked === 'undefined') {
+
+                clicked = true;
+
+                arrowRotation3.setAttribute("from", "0 50 72");
+                arrowRotation3.setAttribute("to", "180 50 65");
+                arrowColor3.setAttribute("from", "white");
+                arrowColor3.setAttribute("to", "black");
+
+            } else {
+
+                delete clicked;
+
+                arrowRotation3.setAttribute("from", "180 50 65");
+                arrowRotation3.setAttribute("to", "0 50 72");
+                arrowColor3.setAttribute("from", "black");
+                arrowColor3.setAttribute("to", "white");
+            }
+    }]]>
+</script>
+    <polygon fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="50.237,80.905 18.12,48.25 4.058,48.25 
+  50.118,95.081 96.18,48.25 82.357,48.25 ">
+
+    <animateTransform 
+    				  id="arrowRotation3"
+                      attributeName="transform" 
+                      attributeType="XML" 
+                      type="rotate" 
+                      from="0 50 72" 
+                      to="180 50 65" 
+                      begin="click" 
+                      dur="450ms" 
+                      repeatCount="1"
+                      fill="freeze"
+                      additive="replace" />
+    <animate          
+    				  id="arrowColor3"
                       attributeName="fill" 
                       from="white" 
                       to="black" 
@@ -602,11 +668,11 @@
                       additive="replace" />
 
     </polygon>
-							</svg>
-							</button>
+              				</svg>
+              				</button>
 						</div>
 					</div>
-				</br>
+				</br> <!-- tredje blockets text & profilbild -->
 						<div class="col-md-9" id="topic-body"><strong style="font-size: 16px;">Kolla in denna artikeln om A.I. inom vården!</strong>
 						<p>
 						</br>	
@@ -627,31 +693,8 @@
 			</div>
 		</div>
 	<div class="col-md-8 col-md-offset-2">
-		<!-- <div class="row mt2">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="row">
-					<div class="col-md-1">
-						<div>
-						</div>
-					</div>
-					<div class="col-md-9">
-						<strong>Tim Gabrielsson</strong>
-						<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<span class="topic-time">10 minutes ago</span>
-					</div>
-					<div class="col-md-2">
-						<img src="" class="profile_image img-circle pull-right"/>
-					</div>
-				</div>
-			</div>
-		</div> -->
+
+<!-- Modalknappen -->
 	<button type="button" id="topic-modal-button" class="btn btn-primary btn-lg col-md-2 col-md-offset-2 modal-button" data-toggle="modal" data-target="#myModal">
 	  Skapa ämne
 	</button>
@@ -661,14 +704,16 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content modal-button">
 	      <div class="modal-header">
-			<button type="button" class="btn btn-default modal-button pull-right" data-dismiss="modal">Stäng</button>
-	        <textarea id="topic-textarea" placeholder="Ämnesrubrik..." rows="1" cols="45%" style="overflow: hidden;"></textarea>
+			<button type="button" class="btn btn-default modal-button pull-right" data-dismiss="modal" style="margin-bottom: 0.6em; margin-top: 0.2em;">Stäng</button>
+	        <textarea id="topic-textarea" placeholder="Ämnesrubrik..." rows="1" cols="45%" style="overflow: hidden; margin-top: 0.5em;"></textarea>
 	      </div>
 	      <div class="modal-body">
 	        <textarea id="topic-textarea" placeholder="Din text..." rows="10%" cols="45%"></textarea>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="col-md-4 col-md-offset-4 btn btn-primary modal-button" style="background-color: #2BADE3;">Publicera</button>
+	        <button type="button" class="col-md-2 col-md-offset-6 btn btn-primary modal-button pull-right" style="background-color: #F15F63; border-color: rgb(215, 215, 215);">Bädda in
+          </button>
 	      </div>
 	    </div>
 	  </div>
